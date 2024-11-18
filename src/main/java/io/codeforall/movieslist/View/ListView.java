@@ -7,8 +7,6 @@ import java.util.List;
 
 public class ListView implements View{
     private ListControl listControl;
-    private MenuView menuView;
-    private Movies movies;
 
     private List<Movies> moviesList;
 
@@ -19,20 +17,14 @@ public class ListView implements View{
         System.out.println("This is your Movies list: \n");
         for(int i = 0; i < moviesList.size(); i ++){
 
-            System.out.println(moviesList.get(i).getMovieId() + " - " + moviesList.get(i).getMovieName());
-        }
-        menuView.show();
-    }
+            System.out.println("Movie number " + moviesList.get(i).getMovieId() + " - " + moviesList.get(i).getMovieName());
 
-    public void setMenuView(MenuView menuView) {
-        this.menuView = menuView;
+
+        }
     }
 
     public void setListControl(ListControl listControl) {
         this.listControl = listControl;
     }
 
-    public void setMovies(Movies movies) {
-        this.movies = movies;
-    }
 }

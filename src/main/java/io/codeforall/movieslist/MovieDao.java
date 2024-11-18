@@ -12,7 +12,7 @@ public class MovieDao {
         List<Movies> moviesList = new ArrayList<>();
 
         try {
-            if (connection == null) {
+           // if (connection == null) {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
 
                 String query = "SELECT * FROM movies";
@@ -25,16 +25,21 @@ public class MovieDao {
                     String name = resultSet.getString(2);
                     moviesList.add(new Movies(id, name));
                 }
-            }
+          //  }
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println("Failure closing the connection : ");
+            }
         }
         return moviesList;
     }
 
     public void addMovie(String movie){
         try {
-            if (connection == null) {
+            //if (connection == null) {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
 
                 String query = "INSERT INTO movies (movie_name) VALUES (?)";
@@ -43,9 +48,14 @@ public class MovieDao {
 
                 statement.executeUpdate();
 
-            }
+            //}
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println("Failure closing the connection : ");
+            }
         }
         System.out.println("Movie - " + movie + " - added successfully");
 
@@ -53,7 +63,7 @@ public class MovieDao {
 
     public void deleteMovie(int movieId){
         try {
-            if (connection == null) {
+           // if (connection == null) {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
 
                 String query = "DELETE FROM movies WHERE movie_id = ?";
@@ -62,9 +72,14 @@ public class MovieDao {
 
                 statement.executeUpdate();
 
-            }
+           // }
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                System.out.println("Failure closing the connection : ");
+            }
         }
         System.out.println("Movie " + movieId + " deleted successfully");
     }

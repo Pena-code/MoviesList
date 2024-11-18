@@ -15,31 +15,35 @@ public class Main {
 
         MenuControl menuControl = new MenuControl();
         MenuView menuView = new MenuView();
-        menuView.setMenuControl(menuControl);
         AddControl addControl = new AddControl();
-        menuControl.setAddControl(addControl);
-        addControl.setMenuView(menuView);
         DeleteControl deleteControl = new DeleteControl();
-        menuControl.setDeleteControl(deleteControl);
         DeleteView deleteView = new DeleteView();
-        deleteControl.setDeleteView(deleteView);
-
         MovieService movieService = new MovieService();
         AddView addView = new AddView();
+        MovieDao movieDao = new MovieDao();
+        ListView listView = new ListView();
+        ListControl listControl = new ListControl();
+
+        addControl.setMenuView(menuView);
         addControl.setMovieService(movieService);
         addControl.setAddView(addView);
+
+        deleteControl.setDeleteView(deleteView);
         deleteControl.setMovieService(movieService);
         deleteControl.setMenuView(menuView);
+        deleteControl.setListView(listView);
 
-        MovieDao movieDao = new MovieDao();
-        movieService.setMovieDao(movieDao);
-        ListView listView = new ListView();
-        listView.setMenuView(menuView);
-        ListControl listControl = new ListControl();
+        menuControl.setAddControl(addControl);
+        menuControl.setDeleteControl(deleteControl);
         menuControl.setListControl(listControl);
-        listControl.setListView(listView);
+
+        menuView.setMenuControl(menuControl);
         listView.setListControl(listControl);
+        listControl.setListView(listView);
         listControl.setMovieService(movieService);
+        listControl.setMenuView(menuView);
+
+        movieService.setMovieDao(movieDao);
 
         menuView.show();
 

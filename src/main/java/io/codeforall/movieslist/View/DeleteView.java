@@ -12,7 +12,7 @@ public class DeleteView implements View{
         Prompt prompt = new Prompt(System.in, System.out);
 
         IntegerInputScanner input = new IntegerInputScanner();
-        input.setMessage("Insert movie number: ");
+        input.setMessage("Insert movie number to delete: ");
 
         movieId = prompt.getUserInput(input);
     }

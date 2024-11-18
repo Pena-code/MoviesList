@@ -4,30 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec988f2d-7b12-40ae-b957-5d55d7ba5b9a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/movies_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/movies_structure.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/prompt-view-0.2.1-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/AddControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/Control.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/DeleteControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/ListControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/MenuControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/MovieDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/MovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Movies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/AddView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/DeleteView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/ListView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/MenuView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/View.java" afterDir="false" />
+    <list default="true" id="ec988f2d-7b12-40ae-b957-5d55d7ba5b9a" name="Changes" comment="Some bugs in the return to menu">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/DeleteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/DeleteControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/ListControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Control/ListControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/MovieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/DeleteView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/DeleteView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/ListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/codeforall/movieslist/View/ListView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,8 +101,17 @@
       <option name="presentableId" value="Default" />
       <updated>1731768046110</updated>
       <workItem from="1731768048961" duration="14992000" />
-      <workItem from="1731855181618" duration="9537000" />
+      <workItem from="1731855181618" duration="10806000" />
+      <workItem from="1731922201185" duration="7544000" />
     </task>
+    <task id="LOCAL-00001" summary="Some bugs in the return to menu">
+      <created>1731865627212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731865627212</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +127,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Some bugs in the return to menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some bugs in the return to menu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
