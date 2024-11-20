@@ -6,14 +6,15 @@ import java.util.List;
 
 public class MovieDao {
 
+    private String url = "jdbc:mysql://localhost:3306/movieslist";
+    private String user = "root";
     private Connection connection;
 
     public List getList(){
         List<Movies> moviesList = new ArrayList<>();
 
         try {
-           // if (connection == null) {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
+                connection = DriverManager.getConnection(url, user, "");
 
                 String query = "SELECT * FROM movies";
                 Statement statement = connection.createStatement();
@@ -25,7 +26,6 @@ public class MovieDao {
                     String name = resultSet.getString(2);
                     moviesList.add(new Movies(id, name));
                 }
-          //  }
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
             try {
@@ -39,8 +39,7 @@ public class MovieDao {
 
     public void addMovie(String movie){
         try {
-            //if (connection == null) {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
+                connection = DriverManager.getConnection(url, user, "");
 
                 String query = "INSERT INTO movies (movie_name) VALUES (?)";
                 PreparedStatement statement = connection.prepareStatement(query);
@@ -48,7 +47,6 @@ public class MovieDao {
 
                 statement.executeUpdate();
 
-            //}
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
             try {
@@ -63,8 +61,7 @@ public class MovieDao {
 
     public void deleteMovie(int movieId){
         try {
-           // if (connection == null) {
-                connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/movieslist", "root", "");
+                connection = DriverManager.getConnection(url, user, "");
 
                 String query = "DELETE FROM movies WHERE movie_id = ?";
                 PreparedStatement statement = connection.prepareStatement(query);
@@ -72,7 +69,6 @@ public class MovieDao {
 
                 statement.executeUpdate();
 
-           // }
         } catch (SQLException ex) {
             System.out.println("Failure to connect to database : " + ex.getMessage());
             try {
